@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--para enlazar -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Gaming store</title>
+    <title>Nexus Gaming Store</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
 </head>
-<!--lo visual-->
 <body>
-    <div class="navbar">
-        <img src="logo.png" alt="Nexus Gaming store"> <!-- Reemplaza 'logo.png' con la ruta de la imagen del logo -->
-        <input type="text" placeholder="Buscar...">
-        <button>🔍</button> <!-- Representación simple del icono de búsqueda -->
-        <div class="buttons">
-            <button onclick="window.location.href='html/productos.html'">PRODUCTOS</button>
-            <button onclick="window.location.href='html/ayuda.html'">AYUDA</button>
-
-    </div>
-    <button onclick="window.location.href='html/login.html'">INICIAR SESIÓN</button>
-    <div class="shopping-cart-icon">🛒</div> <!-- Representación simple del icono del carrito de compras -->
-     </div>
-555
-
-
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Nexus Gaming Store Logo" class="logo">
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." aria-label="Buscar">
+                <button aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="right-icons">
+            <button class="login-button" onclick="window.location.href='html/login.html'" aria-label="Iniciar sesión">INICIAR SESIÓN</button>
+            <div class="shopping-cart-icon" aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></div>
+        </div>
+    </nav>
     
+    <div class="buttons-container">
+        <div class="buttons">
+            <button onclick="window.location.href='html/productos.html'" aria-label="Productos">PRODUCTOS</button>
+            <button onclick="window.location.href='html/ayuda.html'" aria-label="Ayuda">AYUDA</button>
+        </div>
+    </div>
 </body>
-
-
-
-
 </html>
