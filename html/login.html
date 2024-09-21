@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Nexus Gaming Store</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (email === '' || password === '') {
+                alert('Por favor, complete todos los campos.');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -27,7 +38,7 @@
     
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-        <form action="login.php" method="post">
+        <form action="login.php" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required>
@@ -49,4 +60,6 @@
     </div>
 </body>
 </html>
+
+
 
