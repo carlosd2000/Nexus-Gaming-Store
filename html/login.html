@@ -8,15 +8,28 @@
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
     <script>
-        function validateForm() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            if (email === '' || password === '') {
-                alert('Por favor, complete todos los campos.');
-                return false;
+        document.addEventListener('DOMContentLoaded', function() {
+            function mostrarImagenAleatoria() {
+                const numeroAleatorio = Math.random() * 100;
+                let imagen;
+
+                if (numeroAleatorio <= 20) {
+                    imagen = '../img/backgrounds/fondoNo1.jpg';
+                } else if (numeroAleatorio <= 50) {
+                    imagen = '../img/backgrounds/fondoNo2.jpg';
+                } else if (numeroAleatorio <= 60) {
+                    imagen = '../img/backgrounds/fondoNo3.jpg';
+                } else if (numeroAleatorio <= 85) {
+                    imagen = '../img/backgrounds/fondoNo4.jpg';
+                } else {
+                    imagen = '../img/backgrounds/fondoNo5.jpg';
+                }
+
+                document.documentElement.style.setProperty('--background-image', `url(${imagen})`);
             }
-            return true;
-        }
+
+            mostrarImagenAleatoria(); // Llamar a la función al cargar la página
+        });
     </script>
 </head>
 <body>
@@ -60,6 +73,3 @@
     </div>
 </body>
 </html>
-
-
-

@@ -5,10 +5,12 @@
     --hover-color: #e03e00;
     --text-color: #ffffff;
     --font-family: Arial, sans-serif;
+    --background-image: none; /* No imagen de fondo por defecto */
 }
 
 body {
     background-color: var(--background-color);
+    background-image: var(--background-image);
     font-family: var(--font-family);
     display: flex;
     flex-direction: column;
@@ -17,6 +19,9 @@ body {
     height: 100vh;
     margin: 0;
     color: var(--text-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .navbar {
@@ -160,9 +165,3 @@ body {
 .signup button:hover {
     color: var(--primary-color);
 }
-
-
-
-
-
-
