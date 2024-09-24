@@ -1,0 +1,107 @@
+/* Ayuda.css */
+
+/* General background and text color */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the help page */
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Titles */
+h1, h2 {
+    color: #ff4500;  /* Same color as the buttons */
+    text-align: center;
+}
+
+/* FAQ section */
+.faq-section {
+    margin-bottom: 30px;
+}
+
+.faq h3 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.faq p {
+    font-size: 16px;
+    color: #b5b5b5;
+    margin: 10px 0;
+}
+
+/* Contact section */
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    color: #ffffff;
+}
+
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #e03e00;
+}
+
+/* Return to home button */
+.return-home {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.return-home button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.return-home button:hover {
+    background-color: #e03e00;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1f1f1f;
+    color: #b5b5b5;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
