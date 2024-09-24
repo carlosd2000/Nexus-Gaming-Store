@@ -1,0 +1,66 @@
+/* productos.css */
+
+/* Estilo para el contenedor de categorías de productos */
+.product-categories {
+    padding: 20px;
+    background-color: #1f1f1f; /* Mismo color de fondo que la navbar */
+    border-radius: 8px;
+}
+
+/* Estilo para los encabezados de categorías */
+.product-categories h2 {
+    text-align: center;
+    color: #ff4500; /* Color de texto para el título */
+}
+
+/* Estilo para cada categoría */
+.category {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ff4500; /* Borde para cada categoría */
+    border-radius: 5px;
+}
+
+/* Estilo para los encabezados de cada categoría */
+.category h3 {
+    margin-bottom: 10px;
+    color: #ffffff; /* Color de texto para el encabezado de categoría */
+}
+
+/* Estilo para las listas dentro de las categorías */
+.category ul {
+    list-style-type: none; /* Eliminar puntos de las listas */
+    padding: 0; /* Eliminar padding */
+}
+
+/* Estilo para cada elemento de la lista */
+.category ul li {
+    margin: 5px 0;
+}
+
+/* Estilo para los enlaces */
+.category ul li a {
+    color: #ff4500; /* Color de los enlaces */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para los enlaces al pasar el mouse */
+.category ul li a:hover {
+    color: #e03e00; /* Color de los enlaces al pasar el mouse */
+}
+/* Estilo para el botón de regreso */
+.back-button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button-container button:hover {
+    background-color: #e03e00;
+}
+
