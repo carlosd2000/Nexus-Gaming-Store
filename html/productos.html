@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Nexus Gaming Store</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/productos.css"> <!-- Vinculando el CSS de productos -->
+    <title>Productos - Nexus Gaming Store</title>>
+    <link rel="stylesheet" href="../css/productos.css">
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
 </head>
@@ -16,63 +15,73 @@
         </div>
         <div class="search-container">
             <div class="search-bar">
-                <input type="text" placeholder="Buscar..." aria-label="Buscar">
+                <input type="text" placeholder="Buscar productos..." aria-label="Buscar">
                 <button aria-label="Buscar"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="right-icons">
-            <button class="login-button" onclick="window.location.href='login.html'" aria-label="Iniciar sesión">INICIAR SESIÓN</button>
+            <button class="login-button" onclick="window.location.href='html/login.html'" aria-label="Iniciar sesión">INICIAR SESIÓN</button>
             <div class="shopping-cart-icon" aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></div>
         </div>
     </nav>
-    
-    <div class="product-categories">
-        <h2>Categorías de Productos</h2>
-        <div class="category">
-            <h3>Consolas</h3>
-            <ul>
-                <li><a href="consolas/playstation.html">PlayStation</a></li>
-                <li><a href="consolas/xbox.html">Xbox</a></li>
-                <li><a href="consolas/nintendo.html">Nintendo</a></li>
-            </ul>
-        </div>
-        <div class="category">
-            <h3>Juegos</h3>
-            <ul>
-                <li><a href="juegos/accion.html">Acción</a></li>
-                <li><a href="juegos/aventura.html">Aventura</a></li>
-                <li><a href="juegos/deportes.html">Deportes</a></li>
-            </ul>
-        </div>
-        <div class="category">
-            <h3>Periféricos</h3>
-            <ul>
-                <li><a href="perifericos/teclados.html">Teclados</a></li>
-                <li><a href="perifericos/ratones.html">Ratones</a></li>
-                <li><a href="perifericos/auriculares.html">Auriculares</a></li>
-            </ul>
-        </div>
-        <div class="category">
-            <h3>Componentes</h3>
-            <ul>
-                <li><a href="componentes/procesadores.html">Procesadores</a></li>
-                <li><a href="componentes/tarjetas-graficas.html">Tarjetas Gráficas</a></li>
-                <li><a href="componentes/memorias.html">Memorias</a></li>
-            </ul>
-        </div>
-        <div class="category">
-            <h3>Merchandising</h3>
-            <ul>
-                <li><a href="merchandising/camisetas.html">Camisetas</a></li>
-                <li><a href="merchandising/posters.html">Pósters</a></li>
-                <li><a href="merchandising/figuras.html">Figuras</a></li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Botón para volver a la página principal -->
-    <div class="back-button-container" style="text-align: center; margin-top: 20px;">
-        <button onclick="window.location.href='../index.html'" aria-label="Volver a la página principal">VOLVER A LA PÁGINA PRINCIPAL</button>
-    </div>
+    <main>
+        <h1>Lista de Productos</h1>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="img/producto1.jpg" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <p>Descripción breve del producto 1.</p>
+                <p>Precio: $19.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/producto2.jpg" alt="Producto 2">
+                <h2>Producto 2</h2>
+                <p>Descripción breve del producto 2.</p>
+                <p>Precio: $29.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/producto3.jpg" alt="Producto 3">
+                <h2>Producto 3</h2>
+                <p>Descripción breve del producto 3.</p>
+                <p>Precio: $39.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/producto4.jpg" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p>Descripción breve del producto 4.</p>
+                <p>Precio: $49.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/producto5.jpg" alt="Producto 5">
+                <h2>Producto 5</h2>
+                <p>Descripción breve del producto 5.</p>
+                <p>Precio: $59.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/producto6.jpg" alt="Producto 6">
+                <h2>Producto 6</h2>
+                <p>Descripción breve del producto 6.</p>
+                <p>Precio: $69.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <!-- Añade más productos según sea necesario -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Nexus Gaming Store. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

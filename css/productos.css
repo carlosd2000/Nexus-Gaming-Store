@@ -1,66 +1,142 @@
 /* productos.css */
 
-/* Estilo para el contenedor de categorías de productos */
-.product-categories {
-    padding: 20px;
-    background-color: #1f1f1f; /* Mismo color de fondo que la navbar */
-    border-radius: 8px;
+/* General Styles for Products Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
 }
 
-/* Estilo para los encabezados de categorías */
-.product-categories h2 {
-    text-align: center;
-    color: #ff4500; /* Color de texto para el título */
-}
-
-/* Estilo para cada categoría */
-.category {
-    margin: 15px 0;
-    padding: 10px;
-    border: 1px solid #ff4500; /* Borde para cada categoría */
-    border-radius: 5px;
-}
-
-/* Estilo para los encabezados de cada categoría */
-.category h3 {
-    margin-bottom: 10px;
-    color: #ffffff; /* Color de texto para el encabezado de categoría */
-}
-
-/* Estilo para las listas dentro de las categorías */
-.category ul {
-    list-style-type: none; /* Eliminar puntos de las listas */
-    padding: 0; /* Eliminar padding */
-}
-
-/* Estilo para cada elemento de la lista */
-.category ul li {
-    margin: 5px 0;
-}
-
-/* Estilo para los enlaces */
-.category ul li a {
-    color: #ff4500; /* Color de los enlaces */
-    text-decoration: none; /* Eliminar subrayado */
-    transition: color 0.3s; /* Transición suave para el cambio de color */
-}
-
-/* Estilo para los enlaces al pasar el mouse */
-.category ul li a:hover {
-    color: #e03e00; /* Color de los enlaces al pasar el mouse */
-}
-/* Estilo para el botón de regreso */
-.back-button-container button {
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
+    background-color: #1f1f1f;
+}
+
+.logo-container, .right-icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 60px;
+    margin-left: 20px;
+}
+
+.search-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar input[type="text"], .search-bar button, .login-button {
+    padding: 5px;
     border: none;
     border-radius: 5px;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.search-bar button, .login-button {
     background-color: #ff4500;
     color: #ffffff;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.back-button-container button:hover {
+.search-bar button:hover, .login-button:hover {
     background-color: #e03e00;
 }
 
+.right-icons {
+    justify-content: flex-end;
+}
+
+.login-button {
+    margin-right: 20px;
+}
+
+.shopping-cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Product List Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas en la página */
+}
+
+.product-card {
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    transition: transform 0.2s; /* Efecto de hover */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+}
+
+.product-card img {
+    max-width: 100%; /* Asegúrate de que las imágenes se ajusten */
+    border-radius: 5px;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #cccccc; /* Texto más claro para descripciones */
+}
+
+.product-card button {
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #e03e00;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #cccccc;
+}
