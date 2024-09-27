@@ -80,7 +80,51 @@ body {
     cursor: pointer;
 }
 
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+}
+
+/* Categories Styles */
+.categories {
+    width: 200px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    position: sticky; /* Hace que el cuadro de categorías sea estático */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categories button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ff4500; /* Color naranja */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.categories button:hover {
+    background-color: #e03e00; /* Color naranja más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
 /* Product List Styles */
+.product-section {
+    flex-grow: 1;
+}
+
 main {
     padding: 20px;
     text-align: center;
