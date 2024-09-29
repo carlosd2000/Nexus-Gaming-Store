@@ -13,7 +13,11 @@
         <div class="logo-container">
             <img src="../img/logo.jpg" alt="Nexus Gaming Store Logo" class="logo" onclick="window.location.href='../index.html'">
         </div>
-        
+        <div class="search-container"></div>
+        <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Buscar..." aria-label="Buscar">
+            <button onclick="buscarProducto()" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        </div>
     
         <div class="right-icons">
             <button class="login-button" onclick="window.location.href='login.html'" aria-label="Iniciar sesión">INICIAR SESIÓN</button>
@@ -25,40 +29,42 @@
         <div class="content-wrapper">
             <aside class="categories">
                 <h2>Categorías</h2>
-                <button onclick="filterProducts('computadores')">Computadores</button>
-                <button onclick="filterProducts('sillas')">Sillas</button>
-                <button onclick="filterProducts('diademas')">Diademas</button>
-                <button onclick="filterProducts('mouse')">Mouse</button>
-                <button onclick="filterProducts('consolas')">Consolas</button>
-                <button onclick="filterProducts('tarjetas-de-regalo')">Tarjetas de Regalo</button>
-                <button onclick="filterProducts('juegos')">Juegos</button>
+                <ul id="box-search">
+                    <li><a href="a"><i class="fas fa-search"></i>Computadores</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Sillas</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Diademas</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Mouse</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Consolas</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Tarjetas de Regalo</a></li>
+                    <li><a href="a"><i class="fas fa-search"></i>Juegos</a></li>
+                </ul>
             </aside>
             <section class="product-section">
                 <h1>Lista de Productos</h1>
-                <div class="product-list">
-                    <div class="product-list" id="product-list">
-                        <!-- Computadores -->
-                        <div class="product-card computadores">
-                            <img src="img/producto1.jpg" alt="MSI MAG Infinite S3">
-                            <h2>MSI MAG Infinite S3</h2>
-                            <p>Procesador: Intel® Core™ i5-14400F, RAM: 32GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 4060</p>
-                            <p>Precio: $1,149.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card computadores">
-                            <img src="img/producto2.jpg" alt="Acer Nitro N50-650">
-                            <h2>Acer Nitro N50-650</h2>
-                            <p>Procesador: Intel® Core™ i5-13400F, RAM: 16GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 3050</p>
-                            <p>Precio: $849.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card computadores">
-                            <img src="img/producto3.jpg" alt="NITROPC Pack Bronze">
-                            <h2>NITROPC Pack Bronze</h2>
-                            <p>Procesador: AMD Ryzen 5 4650G, RAM: 16GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: Radeon™ Onboard Graphics</p>
-                            <p>Precio: $609.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
+                <div class="product-list" id="product-list">
+                   <!-- Computadores -->
+<div class="product-card computadores">
+    <img src="../img/computador1.jpg" alt="MSI MAG Infinite S3">
+    <h2>MSI MAG Infinite S3</h2>
+    <p>Procesador: Intel® Core™ i5-14400F, RAM: 32GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 4060</p>
+    <p>Precio: $1,149.00</p>
+    <button>Añadir al carrito</button>
+</div>
+
+                    <div class="product-card computadores">
+                        <img src="img/producto2.jpg" alt="Acer Nitro N50-650">
+                        <h2>Acer Nitro N50-650</h2>
+                        <p>Procesador: Intel® Core™ i5-13400F, RAM: 16GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 3050</p>
+                        <p>Precio: $849.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card computadores">
+                        <img src="img/producto3.jpg" alt="NITROPC Pack Bronze">
+                        <h2>NITROPC Pack Bronze</h2>
+                        <p>Procesador: AMD Ryzen 5 4650G, RAM: 16GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: Radeon™ Onboard Graphics</p>
+                        <p>Precio: $609.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
                     <!-- Sillas -->
                     <div class="product-card sillas">
                         <img src="img/producto4.jpg" alt="Drift DR275 PRO">
@@ -124,147 +130,80 @@
                         <p>Iluminación: RGB, Diseño: Para manos grandes, DPI: Alta precisión</p>
                         <p>Precio: $59.99</p>
                         <button>Añadir al carrito</button>
-    </div>
-                        <!-- Consolas -->
-                        <div class="product-card consolas">
-                            <img src="img/producto13.jpg" alt="PlayStation 5 Pro">
-                            <h2>PlayStation 5 Pro</h2>
-                            <p>Almacenamiento: 2TB, Resolución: 4K y trazado de rayos</p>
-                            <p>Precio: $799.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card consolas">
-                            <img src="img/producto14.jpg" alt="Nintendo Switch OLED">
-                            <h2>Nintendo Switch OLED</h2>
-                            <p>Pantalla: OLED, Almacenamiento: 64GB</p>
-                            <p>Precio: $349.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card consolas">
-                            <img src="img/producto15.jpg" alt="Xbox Series X">
-                            <h2>Xbox Series X</h2>
-                            <p>Almacenamiento: 1TB SSD, Resolución: 4K</p>
-                            <p>Precio: $499.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-    
-                        <!-- Tarjetas de Regalo -->
-                        <div class="product-card tarjetas-de-regalo">
-                            <img src="img/producto16.jpg" alt="Tarjeta de Regalo $50">
-                            <h2>Tarjeta de Regalo $50</h2>
-                            <p>Valor: $50</p>
-                            <p>Precio: $50.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card tarjetas-de-regalo">
-                            <img src="img/producto17.jpg" alt="Tarjeta de Regalo $100">
-                            <h2>Tarjeta de Regalo $100</h2>
-                            <p>Valor: $100</p>
-                            <p>Precio: $100.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card tarjetas-de-regalo">
-                            <img src="img/producto18.jpg" alt="Tarjeta de Regalo $200">
-                            <h2>Tarjeta de Regalo $200</h2>
-                            <p>Valor: $200</p>
-                            <p>Precio: $200.00</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-    
-                        <!-- Juegos -->
-                        <div class="product-card juegos">
-                            <img src="img/producto19.jpg" alt="The Legend of Zelda: Breath of the Wild">
-                            <h2>The Legend of Zelda: Breath of the Wild</h2>
-                            <p>Plataforma: Nintendo Switch</p>
-                            <p>Precio: $59.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card juegos">
-                            <img src="img/producto20.jpg" alt="Cyberpunk 2077">
-                            <h2>Cyberpunk 2077</h2>
-                            <p>Plataforma: PS4, PS5, Xbox, PC</p>
-                            <p>Precio: $49.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                        <div class="product-card juegos">
-                            <img src="img/producto21.jpg" alt="Elden Ring">
-                            <h2>Elden Ring</h2>
-                            <p>Plataforma: PS4, PS5, Xbox, PC</p>
-                            <p>Precio: $59.99</p>
-                            <button>Añadir al carrito</button>
-                        </div>
                     </div>
-                </section>
-            </div>
-        </main>
-        
-        <footer>
-            <div class="footer-container">
-                <!-- Informacion de contacto -->
-                <div class="contact-info">
-                    <h3>CONTACTANOS</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Calle 15 # 77 - 30 Local B218 (Centro comercial UNICO)</p>
-                    <p><i class="fab fa-whatsapp"></i> 301 485 2573</p>
+                    <!-- Consolas -->
+                    <div class="product-card consolas">
+                        <img src="img/producto13.jpg" alt="PlayStation 5 Pro">
+                        <h2>PlayStation 5 Pro</h2>
+                        <p>Almacenamiento: 2TB, Resolución: 4K y trazado de rayos</p>
+                        <p>Precio: $799.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card consolas">
+                        <img src="img/producto14.jpg" alt="Nintendo Switch OLED">
+                        <h2>Nintendo Switch OLED</h2>
+                        <p>Pantalla: 7 pulgadas, Almacenamiento: 64GB, Modo: Portátil y Dock</p>
+                        <p>Precio: $349.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card consolas">
+                        <img src="img/producto15.jpg" alt="Xbox Series X">
+                        <h2>Xbox Series X</h2>
+                        <p>Almacenamiento: 1TB, Resolución: 4K, Soporte: Xbox Game Pass</p>
+                        <p>Precio: $499.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <!-- Tarjetas de Regalo -->
+                    <div class="product-card tarjetas">
+                        <img src="img/producto16.jpg" alt="Tarjeta de Regalo $50">
+                        <h2>Tarjeta de Regalo $50</h2>
+                        <p>Usada en cualquier compra en Nexus Gaming Store</p>
+                        <p>Precio: $50.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card tarjetas">
+                        <img src="img/producto17.jpg" alt="Tarjeta de Regalo $100">
+                        <h2>Tarjeta de Regalo $100</h2>
+                        <p>Usada en cualquier compra en Nexus Gaming Store</p>
+                        <p>Precio: $100.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card tarjetas">
+                        <img src="img/producto18.jpg" alt="Tarjeta de Regalo $200">
+                        <h2>Tarjeta de Regalo $200</h2>
+                        <p>Usada en cualquier compra en Nexus Gaming Store</p>
+                        <p>Precio: $200.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <!-- Juegos -->
+                    <div class="product-card juegos">
+                        <img src="img/producto19.jpg" alt="The Legend of Zelda: Tears of the Kingdom">
+                        <h2>The Legend of Zelda: Tears of the Kingdom</h2>
+                        <p>Plataforma: Nintendo Switch, Aventura y acción, Calificación: 10/10</p>
+                        <p>Precio: $59.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card juegos">
+                        <img src="img/producto20.jpg" alt="God of War Ragnarök">
+                        <h2>God of War Ragnarök</h2>
+                        <p>Plataforma: PlayStation 5, Aventura y acción, Calificación: 9.5/10</p>
+                        <p>Precio: $69.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                    <div class="product-card juegos">
+                        <img src="img/producto21.jpg" alt="Halo Infinite">
+                        <h2>Halo Infinite</h2>
+                        <p>Plataforma: Xbox, Shooter en primera persona, Calificación: 8.5/10</p>
+                        <p>Precio: $59.99</p>
+                        <button>Añadir al carrito</button>
+                    </div>
                 </div>
-    
-                <!-- Horarios -->
-                <div class="horarios-info">
-                    <h3>HORARIOS</h3>
-                    <p><i class="fas fa-clock"></i> LUN - SAB: 9:00 AM - 7:00 PM</p>
-                    <p><i class="fas fa-clock"></i> DOM: 10:00 AM - 3:00 PM</p>
-                </div>
-    
-                <!-- Redes sociales -->
-    <div class="social-media">
-        <h3>SÍGUENOS</h3>
-        <div class="social-links">
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+            </section>
         </div>
-    </div>
-    
-    
-            <!-- WhatsApp boton flotante -->
-            <div class="whatsapp-button">
-                <a href="https://www.whatsapp.com/" target="_blank">
-                    <button>¿Cómo puedo ayudarte?</button>
-                </a>
-            </div>
-    
-            <div class="footer-bottom">
-                <p>Nexus Gaming Store &copy; 2024. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const backgrounds = [
-                    'url("../img/background1.jpg")',
-                    'url("../img/background2.jpg")',
-                    'url("../img/background3.jpg")'
-                ];
-                const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-                document.body.style.backgroundImage = randomBackground;
-            });
-    
-            function filterProducts(category) {
-                const products = document.querySelectorAll('.product-card');
-                products.forEach(product => {
-                    if (product.classList.contains(category) || category === 'all') {
-                        product.style.display = 'block';
-                    } else {
-                        product.style.display = 'none';
-                    }
-                });
-            }
-        </script>
-    </body>
-    </html>
-    
+    </main>
+
+    <footer>
+        <p>© 2024 Nexus Gaming Store. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

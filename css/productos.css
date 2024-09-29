@@ -146,15 +146,20 @@ main {
     transition: transform 0.2s; /* Efecto de hover */
 }
 
+/* Efecto de hover para la tarjeta del producto */
 .product-card:hover {
     transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
 }
 
+/* Estilo de imagen del producto */
 .product-card img {
-    max-width: 100%; /* Asegúrate de que las imágenes se ajusten */
-    border-radius: 5px;
+    max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
+/* Estilo de título y descripción del producto */
 .product-card h2 {
     font-size: 1.5em;
     margin: 10px 0;
@@ -229,7 +234,6 @@ footer {
     color: #ff4500; 
 }
 
-
 /* Estilo para la sección Nexus Gaming Store (Derechos reservados) */
 .footer-bottom {
     text-align: center;
@@ -239,7 +243,6 @@ footer {
     width: 100%; /* Aseguramos que ocupe todo el ancho */
     bottom: 0; /* Aseguramos que esté siempre al final */
 }
-
 
 /* Estilo de botón de WhatsApp (opcional) */
 .whatsapp-button {

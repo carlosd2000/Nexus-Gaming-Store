@@ -4,20 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Productos</title>
-    <link rel="stylesheet" href="buscar.css">
+    <link rel="stylesheet" href="../css/buscar.css">
+    <script src="../js/buscar.js"></script>
 </head>
 <body>
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar">
-        <button onclick="redirectToProducts()">Buscar</button>
+        <button onclick="redirectToCategory()">Buscar</button>
     </div>
     <div id="search-results" class="results-container"></div>
 
     <script>
-        function redirectToProducts() {
-            const query = document.getElementById('search-input').value;
-            window.location.href = `productos.html?query=${query}`;
+        function redirectToCategory() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            if (query) {  // Verifica que haya un valor antes de redirigir
+                window.location.href = `productos.html?category=${encodeURIComponent(query)}`;
+            } else {
+                alert('Por favor ingresa un término de búsqueda.');  // Alerta si el campo está vacío
+            }
         }
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function loadCategoryProducts() {
+            const category = getQueryParam('category');
+            const searchResultsDiv = document.getElementById('search-results');
+
+            if (category) {
+                searchResultsDiv.innerHTML = `<h2>Mostrando productos de la categoría: <strong>${category}</strong></h2>`;
+                
+                // Simulación de productos encontrados por categoría
+                const productosSimulados = {
+                    'computadores': [
+                        { nombre: 'Computador Gamer', descripcion: 'Un potente computador para gamers.', precio: 1200 },
+                        { nombre: 'Computador de Oficina', descripcion: 'Computador ideal para trabajos de oficina.', precio: 800 }
+                    ],
+                    'sillas': [
+                        { nombre: 'Silla Ergonomica', descripcion: 'Silla cómoda para largas horas de trabajo.', precio: 300 },
+                        { nombre: 'Silla de Juego', descripcion: 'Silla diseñada para gamers.', precio: 350 }
+                    ],
+                };
+
+                // Mostrar resultados de la categoría seleccionada
+                if (productosSimulados[category]) {
+                    searchResultsDiv.innerHTML += productosSimulados[category].map(producto => `
+                        <div class="producto">
+                            <h3>${producto.nombre}</h3>
+                            <p>${producto.descripcion}</p>
+                            <p>Precio: $${producto.precio}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    searchResultsDiv.innerHTML += `<p>No se encontraron productos para la categoría: <strong>${category}</strong>.</p>`;
+                }
+            } else {
+                searchResultsDiv.innerHTML = `<p>No se especificó ninguna categoría.</p>`;
+            }
+        }
+
+        window.onload = loadCategoryProducts;
     </script>
 </body>
 </html>
