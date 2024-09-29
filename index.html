@@ -15,8 +15,8 @@
         </div>
         <div class="search-container">
             <div class="search-bar">
-                <input type="text" placeholder="Buscar..." aria-label="Buscar">
-                <button aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Buscar..." aria-label="Buscar">
+                <button aria-label="Buscar" onclick="redirectToSearch()"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="right-icons">
@@ -51,11 +51,9 @@
             </div>
         </div>
         <!-- Controles de navegación -->
-        <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
-        <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+        <div class="carousel-control-prev" onclick="prevSlide()">❮</div>
+        <div class="carousel-control-next" onclick="nextSlide()">❯</div>
     </div>
-    
-    
 </body>
 <footer>
     <div class="footer-container">
@@ -74,32 +72,38 @@
         </div>
 
         <!-- Redes sociales -->
-<div class="social-media">
-<h3>SÍGUENOS</h3>
-<div class="social-links">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-        <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
-</div>
+        <div class="social-media">
+            <h3>SÍGUENOS</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
 
+        <!-- WhatsApp boton flotante -->
+        <div class="whatsapp-button">
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <button>¿Cómo puedo ayudarte?</button>
+            </a>
+        </div>
 
-    <!-- WhatsApp boton flotante -->
-    <div class="whatsapp-button">
-        <a href="https://www.whatsapp.com/" target="_blank">
-            <button>¿Cómo puedo ayudarte?</button>
-        </a>
-    </div>
-
-    <div class="footer-bottom">
-        <p>Nexus Gaming Store &copy; 2024. Todos los derechos reservados.</p>
+        <div class="footer-bottom">
+            <p>Nexus Gaming Store © 2024. Todos los derechos reservados.</p>
+        </div>
     </div>
 </footer>
 
+<script>
+    function redirectToSearch() {
+        const query = document.getElementById('search-input').value;
+        window.location.href = `buscar.html?query=${query}`;
+    }
+</script>
 </html>

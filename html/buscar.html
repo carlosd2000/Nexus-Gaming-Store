@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Productos</title>
+    <link rel="stylesheet" href="buscar.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar">
+        <button onclick="redirectToProducts()">Buscar</button>
+    </div>
+    <div id="search-results" class="results-container"></div>
+
+    <script>
+        function redirectToProducts() {
+            const query = document.getElementById('search-input').value;
+            window.location.href = `productos.html?query=${query}`;
+        }
+    </script>
+</body>
+</html>
