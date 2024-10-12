@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/login.js" defer></script> <!-- Asegúrate de usar defer para cargar el script después de que el DOM esté listo -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function mostrarImagenAleatoria() {
@@ -38,7 +40,6 @@
             <img src="../img/logo.jpg" alt="Nexus Gaming Store Logo" class="logo" onclick="window.location.href='../index.html'">
         </div>
         
-        
         <div class="search-container">
             <div class="search-bar">
                 <input type="text" placeholder="Buscar..." aria-label="Buscar">
@@ -50,19 +51,21 @@
             <div class="shopping-cart-icon" aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></div>
         </div>
     </nav>
-    
+
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-        <form action="login.php" method="post" onsubmit="return validateForm()">
+        <form id="loginForm"> <!-- Asegúrate de agregar el ID 'loginForm' al formulario -->
             <div class="form-group">
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required autofocus>
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="loginbtn">Iniciar Sesión</button>
+           
+            <button type="submit" class="loginbtn">Iniciar sesión</button>
+
         </form>
         <div class="signup">
             <p>¿No tienes una cuenta? <a href="registrarse.html">Regístrate</a>.</p>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/registrarse.css"> <!-- Vinculando el CSS de registrarse -->
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/registrarse.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function mostrarImagenAleatoria() {
@@ -53,7 +55,7 @@
 
     <div class="container">
         <h2>Registro de Usuario</h2>
-        <form action="/registro" method="post">
+        <form id="signupForm">
             <div class="input-group">
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" required>
@@ -69,11 +71,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <div class="input-group">
-                <label for="confirm-password">Confirmar Contraseña</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-
+    
             <div class="input-group">
                 <button type="submit">Registrarse</button>
             </div>
