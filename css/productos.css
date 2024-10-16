@@ -34,7 +34,7 @@ body {
 }
 
 .search-container {
-    flex: 2;
+    flex: 0;
     display: flex;
     justify-content: center;
 }
