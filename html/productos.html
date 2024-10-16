@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../css/productos.css">
     <link rel="icon" href="../img/logo.jpg">
     <script src="https://kit.fontawesome.com/78ddf66f88.js" crossorigin="anonymous"></script>
+    <script src="../js/productos.js" defer></script>
+    <script src="../js/buscar.js" defer></script>
+
 </head>
 <body>
     <nav class="navbar">
@@ -30,26 +33,27 @@
             <aside class="categories">
                 <h2>Categorías</h2>
                 <ul id="box-search">
-                    <li><a href="a"><i class="fas fa-search"></i>Computadores</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Sillas</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Diademas</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Mouse</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Consolas</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Tarjetas de Regalo</a></li>
-                    <li><a href="a"><i class="fas fa-search"></i>Juegos</a></li>
+                    <li><button class="category-button" data-category="todos"><i class="fas fa-search"></i>Todos</button></li>
+                    <li><button class="category-button" data-category="computadores"><i class="fas fa-search"></i>Computadores</button></li>
+                    <li><button class="category-button" data-category="sillas"><i class="fas fa-search"></i>Sillas</button></li>
+                    <li><button class="category-button" data-category="diademas"><i class="fas fa-search"></i>Diademas</button></li>
+                    <li><button class="category-button" data-category="mouse"><i class="fas fa-search"></i>Mouse</button></li>
+                    <li><button class="category-button" data-category="consolas"><i class="fas fa-search"></i>Consolas</button></li>
+                    <li><button class="category-button" data-category="tarjetas"><i class="fas fa-search"></i>Tarjetas de Regalo</button></li>
+                    <li><button class="category-button" data-category="juegos"><i class="fas fa-search"></i>Juegos</button></li>
                 </ul>
             </aside>
             <section class="product-section">
                 <h1>Lista de Productos</h1>
                 <div class="product-list" id="product-list">
-                   <!-- Computadores -->
-<div class="product-card computadores">
-    <img src="../img/imagenes de productos/computador1.jpg" alt="MSI MAG Infinite S3">
-    <h2>MSI MAG Infinite S3</h2>
-    <p>Procesador: Intel® Core™ i5-14400F, RAM: 32GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 4060</p>
-    <p>Precio: $1,149.00</p>
-    <button>Añadir al carrito</button>
-</div>
+                    <!-- Computadores -->
+                    <div class="product-card computadores">
+                        <img src="../img/imagenes de productos/computador1.jpg" alt="MSI MAG Infinite S3">
+                        <h2>MSI MAG Infinite S3</h2>
+                        <p>Procesador: Intel® Core™ i5-14400F, RAM: 32GB, Almacenamiento: 1TB SSD, Tarjeta gráfica: GeForce RTX™ 4060</p>
+                        <p>Precio: $1,149.00</p>
+                        <button>Añadir al carrito</button>
+                    </div>
 
                     <div class="product-card computadores">
                         <img src="../img/imagenes de productos/acernitron50650.jpg" alt="Acer Nitro N50-650">

@@ -1,29 +1,39 @@
 // buscar.js
-
 document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById("search-input");
-    const categories = document.querySelectorAll(".categories a");
+    const searchInput = document.getElementById("search-bar");
+    const searchButton = document.querySelector('button[aria-label="Buscar"]');
+    const products = document.querySelectorAll('.product-card');
 
-    searchInput.addEventListener("input", function() {
-        const searchTerm = this.value.toLowerCase();
-        let found = false;
+    function buscarProducto() {
+        const searchTerm = searchInput.value.toLowerCase();
 
-        // Recorremos cada categoría
-        categories.forEach(category => {
-            const categoryName = category.textContent.toLowerCase();
+        products.forEach(product => {
+            // Obtenemos las clases de la tarjeta del producto
+            const productClasses = product.classList;
+            const productName = product.querySelector('h2').textContent.toLowerCase();
+            let found = false;
 
-            // Si el término de búsqueda coincide con el nombre de la categoría
-            if (categoryName.includes(searchTerm)) {
-                // Cambiamos la URL de la categoría
-                window.location.href = category.getAttribute("href");
+            // Comprobamos si el término de búsqueda está en las clases del producto
+            productClasses.forEach(className => {
+                if (className.includes(searchTerm)) {
+                    found = true;
+                }
+            });
+
+            // Comprobamos si el término de búsqueda está en el nombre del producto
+            if (productName.includes(searchTerm)) {
                 found = true;
-                return;
+            }
+
+            if (found) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
             }
         });
+    }
 
-        // Si no se encuentra ninguna coincidencia, podrías manejarlo aquí (opcional)
-        if (!found && searchTerm !== "") {
-            console.log("No se encontró la categoría.");
-        }
-    });
+    searchButton.addEventListener('click', buscarProducto);
+    searchInput.addEventListener('input', buscarProducto);
 });
+
